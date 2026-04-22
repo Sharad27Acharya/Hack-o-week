@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITNAGPUR - Official Chat Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Left Sidebar - Chat History -->
+            <aside class="chat-history-sidebar">
+                <div class="sidebar-header">
+                    <h3><i class="fas fa-comment-dots"></i> Recent Chats</h3>
+                    <button class="new-chat-btn"><i class="fas fa-plus"></i> New</button>
+                </div>
+                
+                <div class="search-chats">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search conversations...">
+                </div>
+
+                <div class="chat-list">
+                    <div class="chat-list-item active">
+                        <div class="chat-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="chat-details">
+                            <h4>SITNAGPUR Assistant</h4>
+                            <p>How can I help you today?</p>
+                            <span class="chat-time">Just now</span>
+                        </div>
+                        <span class="unread-badge">2</span>
+                    </div>
+
+                    <div class="chat-list-item">
+                        <div class="chat-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="chat-details">
+                            <h4>Admissions Query</h4>
+                            <p>Application deadline 2026...</p>
+                            <span class="chat-time">2 hours ago</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-list-item">
+                        <div class="chat-avatar">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="chat-details">
+                            <h4>Course Information</h4>
+                            <p>B.Tech Computer Science...</p>
+                            <span class="chat-time">Yesterday</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-list-item">
+                        <div class="chat-avatar">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="chat-details">
+                            <h4>Fee Structure</h4>
+                            <p>Scholarship opportunities...</p>
+                            <span class="chat-time">3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-file-pdf"></i> Prospectus 2026</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-check"></i> Academic Calendar</a></li>
+                        <li><a href="#"><i class="fas fa-trophy"></i> Achievements</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Chat Area -->
+            <section class="chat-main-area">
+                <div class="chat-container">
+                    <!-- Chat Header (Simplified) -->
+                    <div class="chat-header">
+                        <div class="chat-header-info">
+                            <div class="bot-status-indicator">
+                                <i class="fas fa-circle"></i>
+                                <span>SITNAGPUR Assistant</span>
+                            </div>
+                            <p class="bot-subtitle">Official Institute Chatbot • Online 24/7</p>
+                        </div>
+                        <!-- Removed video, call and three dots buttons -->
+                    </div>
+
+                    <!-- Messages Area -->
+                    <div class="messages-area" id="messagesArea">
+                        <!-- Welcome Message -->
+                        <div class="message-date-divider">
+                            <span>Today</span>
+                        </div>
+
+                        <div class="message bot">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content-wrapper">
+                                <div class="message-sender">SITNAGPUR Assistant</div>
+                                <div class="message-bubble">
+                                    <p>👋 Welcome to SITNAGPUR Official Chat Assistant!</p>
+                                    <p>I'm here to help you with:</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check-circle"></i> Admission inquiries</li>
+                                        <li><i class="fas fa-check-circle"></i> Course information</li>
+                                        <li><i class="fas fa-check-circle"></i> Fee structure & scholarships</li>
+                                        <li><i class="fas fa-check-circle"></i> Exam schedules</li>
+                                        <li><i class="fas fa-check-circle"></i> Campus facilities</li>
+                                        <li><i class="fas fa-check-circle"></i> Placement statistics</li>
+                                    </ul>
+                                    <p>How may I assist you today?</p>
+                                </div>
+                                <span class="message-time">10:00 AM</span>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="quick-actions-container">
+                            <p>Quick Actions:</p>
+                            <div class="quick-action-buttons">
+                                <button class="quick-action-btn" data-query="admissions">
+                                    <i class="fas fa-graduation-cap"></i> Admissions 2026
+                                </button>
+                                <button class="quick-action-btn" data-query="courses">
+                                    <i class="fas fa-book-open"></i> Courses
+                                </button>
+                                <button class="quick-action-btn" data-query="fees">
+                                    <i class="fas fa-rupee-sign"></i> Fee Structure
+                                </button>
+                                <button class="quick-action-btn" data-query="exams">
+                                    <i class="fas fa-calendar-alt"></i> Exam Schedule
+                                </button>
+                                <button class="quick-action-btn" data-query="placement">
+                                    <i class="fas fa-briefcase"></i> Placements
+                                </button>
+                                <button class="quick-action-btn" data-query="contact">
+                                    <i class="fas fa-phone"></i> Contact
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Typing Indicator (hidden by default) -->
+                    <div class="typing-indicator" id="typingIndicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- Input Area (Simplified) -->
+                    <div class="input-area">
+                        <input type="text" 
+                               id="userInput" 
+                               placeholder="Type your message here..." 
+                               autocomplete="off">
+                        <button class="send-btn" id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                    <!-- Removed the chat footer with the official communication text -->
+                </div>
+            </section>
+
+            <!-- Right Sidebar - Institute Info -->
+            <aside class="institute-sidebar">
+                <div class="institute-card">
+                    <h3>SITNAGPUR at a Glance</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span class="stat-value">5000+</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span class="stat-value">250+</span>
+                            <span class="stat-label">Faculty</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-building"></i>
+                            <span class="stat-value">15+</span>
+                            <span class="stat-label">Departments</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <span class="stat-value">92%</span>
+                            <span class="stat-label">Placements</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcements-card">
+                    <h3><i class="fas fa-bullhorn"></i> Announcements</h3>
+                    <div class="announcement-list">
+                        <div class="announcement-item">
+                            <span class="announcement-badge">NEW</span>
+                            <p>Admissions open for 2026-27</p>
+                            <small>2 hours ago</small>
+                        </div>
+                        <div class="announcement-item">
+                            <span class="announcement-badge urgent">URGENT</span>
+                            <p>Exam schedule for even semester</p>
+                            <small>Yesterday</small>
+                        </div>
+                        <div class="announcement-item">
+                            <p>Campus recruitment drive - Microsoft</p>
+                            <small>3 days ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="office-hours-card">
+                    <h3><i class="fas fa-clock"></i> Office Hours</h3>
+                    <ul>
+                        <li><span>Mon - Fri:</span> 9:00 AM - 5:00 PM</li>
+                        <li><span>Saturday:</span> 9:00 AM - 1:00 PM</li>
+                        <li><span>Sunday:</span> Closed</li>
+                    </ul>
+                    <p class="emergency-note">
+                        <i class="fas fa-exclamation-circle"></i>
+                        For emergencies: +91 712 280 1234
+                    </p>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
